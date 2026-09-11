@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виктор — цифровые решения для бизнеса</title>
+    <meta name="description" content="Разработка сайтов, дизайн, SEO-продвижение. Закажите услугу напрямую на сайте или напишите в чат поддержки.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+    <div class="preloader-logo">В</div>
+</div>
+
+<!-- NAV -->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#home" class="nav-logo">Виктор<span>.</span></a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#services" class="nav-link" data-nav>Услуги</a></li>
+            <li><a href="#portfolio" class="nav-link" data-nav>Портфолио</a></li>
+            <li><a href="#testimonials" class="nav-link" data-nav>Отзывы</a></li>
+            <li><a href="#contact" class="nav-link" data-nav>Контакты</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="#contact" class="btn btn-primary btn-sm">Обсудить проект</a>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+    <div class="container hero-content">
+        <span class="hero-badge reveal">🚀 Открыт к новым проектам</span>
+        <h1 class="hero-title reveal" data-delay="100">Создаю цифровые <span class="gradient-text">продукты</span>, которые работают на ваш бизнес</h1>
+        <p class="hero-sub reveal" data-delay="200">Веб-дизайн, разработка и продвижение. Точные цены, прозрачные сроки и связь с вами напрямую на этом сайте.</p>
+        <div class="hero-buttons reveal" data-delay="300">
+            <a href="#services" class="btn btn-primary">Смотреть услуги</a>
+            <a href="#contact" class="btn btn-ghost">Обсудить проект</a>
+        </div>
+        <div class="hero-stats reveal" data-delay="400">
+            <div class="stat"><b data-count="120">0</b><span>проектов</span></div>
+            <div class="stat"><b data-count="5">0</b><span>лет опыта</span></div>
+            <div class="stat"><b data-count="97">0</b><span>% клиентов довольны</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Услуги</span>
+            <h2 class="section-title">Что я <span class="gradient-text">предлагаю</span></h2>
+            <p class="section-sub">Каждая услуга — под ключ. Оцените стоимость прямо сейчас.</p>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+            <!-- карточки из js/main.js -->
+        </div>
+
+        <div class="services-note reveal">
+            <span class="note-icon">💰</span>
+            <p>Не нашли нужную услугу? <a href="#contact" class="link-accent">Опишите задачу</a> — я рассчитаю стоимость индивидуально.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ADD SERVICE -->
+<section class="section section-alt" id="add-service">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Панель управления</span>
+            <h2 class="section-title">Добавить <span class="gradient-text">услугу</span> на сайт</h2>
+            <p class="section-sub">Заполните форму — карточка услуги мгновенно появится в блоке выше.</p>
+        </div>
+
+        <div class="add-wrap reveal">
+            <div class="add-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="newServiceName">Название услуги</label>
+                        <input class="field" type="text" id="newServiceName" placeholder="Например: Разработка сайта">
+                    </div>
+                    <div class="form-group">
+                        <label for="newServicePrice">Цена</label>
+                        <input class="field" type="text" id="newServicePrice" placeholder="Например: 25 000 ₽">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="newServiceDesc">Описание услуги</label>
+                    <textarea class="field" id="newServiceDesc" rows="4" placeholder="Опишите, что входит в услугу и какие результаты получит клиент"></textarea>
+                </div>
+                <button class="btn btn-primary btn-full" onclick="addService()">＋ Добавить услугу</button>
+            </div>
+            <div class="add-preview">
+                <span class="add-preview-label">Так будет выглядеть карточка</span>
+                <div class="add-preview-card" id="addPreview">
+                    <div class="ap-icon">🛠️</div>
+                    <h3>Название услуги</h3>
+                    <p>Описание услуги появится здесь...</p>
+                    <div class="ap-price">10 000 ₽</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section" id="portfolio">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Портфолио</span>
+            <h2 class="section-title">Примеры <span class="gradient-text">моих работ</span></h2>
+            <p class="section-sub">Реальные проекты, которыми я горжусь</p>
+        </div>
+
+        <div class="portfolio-grid">
+            <article class="portfolio-card reveal">
+                <div class="portfolio-thumb thumb-1"><span>Гермес</span></div>
+                <div class="portfolio-body">
+                    <h3>Корпоративный сайт</h3>
+                    <p>Сайт юридической компании «Гермес»</p>
+                </div>
+            </article>
+            <article class="portfolio-card reveal">
+                <div class="portfolio-thumb thumb-2"><span>Автошкола</span></div>
+                <div class="portfolio-body">
+                    <h3>Сайт-визитка</h3>
+                    <p>Лендинг автошколы «СВОБОДНАЯ-ЕЗДА»</p>
+                </div>
+            </article>
+            <article class="portfolio-card reveal">
+                <div class="portfolio-thumb thumb-3"><span>Поддержка 24/7</span></div>
+                <div class="portfolio-body">
+                    <h3>Веб-приложение</h3>
+                    <p>Приложение для заказа услуг с личным кабинетом</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-alt" id="testimonials">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Отзывы</span>
+            <h2 class="section-title">Что говорят <span class="gradient-text">клиенты</span></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial reveal">
+                <div class="stars">★★★★★</div>
+                <p>"Сделали сайт за неделю. Всё чётко, красиво, по договорённости. Рекомендую!"</p>
+                <div class="author">Андрей С., ООО «Гермес»</div>
+            </div>
+            <div class="testimonial reveal">
+                <div class="stars">★★★★★</div>
+                <p>"Отличная связь с подрядчиком — все правки вносились мгновенно, прямо в чате."</p>
+                <div class="author">Мария К., автошкола «СВОБОДНАЯ-ЕЗДА»</div>
+            </div>
+            <div class="testimonial reveal">
+                <div class="stars">★★★★★</div>
+                <p>"Цена совпала с офертой. Без скрытых доплат. Продолжаем сотрудничество!"</p>
+                <div class="author">Иван П., индивидуальный предприниматель</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag">Контакты</span>
+            <h2 class="section-title">Свяжитесь <span class="gradient-text">со мной</span></h2>
+            <p class="section-sub">Оставьте заявку — я отвечу в течение рабочего дня.</p>
+        </div>
+
+        <div class="contact-wrap">
+            <div class="contact-info reveal">
+                <h3>Быстрая связь</h3>
+                <p>Напишите мне в мессенджер или позвоните — это самый быстрый способ.</p>
+                <div class="contact-channels">
+                    <a class="channel" href="https://t.me/your_username" target="_blank">
+                        <span class="channel-icon ch-telegram">✈️</span>
+                        <span class="channel-text"><b>Telegram</b><small>@your_username</small></span>
+                    </a>
+                    <a class="channel" href="https://wa.me/79000000000" target="_blank">
+                        <span class="channel-icon ch-whatsapp">💬</span>
+                        <span class="channel-text"><b>WhatsApp</b><small>+7 900 000-00-00</small></span>
+                    </a>
+                    <a class="channel" href="tel:+79000000000">
+                        <span class="channel-icon ch-phone">☎️</span>
+                        <span class="channel-text"><b>Телефон</b><small>+7 900 000-00-00</small></span>
+                    </a>
+                    <a class="channel" href="mailto:hello@viktordev.ru">
+                        <span class="channel-icon ch-mail">✉️</span>
+                        <span class="channel-text"><b>Почта</b><small>hello@viktordev.ru</small></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-card reveal">
+                <h3>Оставьте заявку</h3>
+                <form onsubmit="sendMessage(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Ваше имя</label>
+                            <input class="field" type="text" id="contactName" placeholder="Иван" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Почта или телефон</label>
+                            <input class="field" type="text" id="contactEmail" placeholder="ivan@mail.ru" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Сообщение</label>
+                        <textarea class="field" id="contactMessage" rows="5" placeholder="Опишите вашу задачу..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">🔔 Отправить заявку</button>
+                    <div class="notification-success" id="contactSuccess">✅ Сообщение отправлено! Я свяжусь с вами в ближайшее время.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo">Виктор<span>.</span></div>
+        <p class="footer-text">Цифровые решения, которые работают на ваш бизнес.</p>
+        <div class="footer-socials">
+            <a href="#" class="social" aria-label="Telegram">✈️</a>
+            <a href="#" class="social" aria-label="WhatsApp">💬</a>
+            <a href="#" class="social" aria-label="ВКонтакте">VK</a>
+        </div>
+        <div class="footer-bottom">© 2026 Виктор. Все права защищены.</div>
+    </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- CHAT WIDGET -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <div class="chat-header-user">
+                <span class="chat-avatar">В</span>
+                <div class="chat-header-info">
+                    <b>Поддержка</b>
+                    <small><span class="online-dot"></span> онлайн</small>
+                </div>
+            </div>
+            <button class="chat-close" onclick="toggleChat()">✕</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-msg chat-msg-support">
+                Здравствуйте! 👋 Чем могу помочь? Напишите свой вопрос — я на связи.
+            </div>
+        </div>
+        <div class="chat-quick">
+            <button class="quick-btn" onclick="sendQuick('Хочу заказать услугу')">Заказать услугу</button>
+            <button class="quick-btn" onclick="sendQuick('Вопрос по цене')">Вопрос по цене</button>
+            <button class="quick-btn" onclick="sendQuick('Другое')">Другое</button>
+        </div>
+        <div class="chat-input-wrap">
+            <input type="text" id="chatInput" placeholder="Введите сообщение..." onkeydown="if(event.key==='Enter')sendChat()">
+            <button class="chat-send" onclick="sendChat()" aria-label="Отправить">
+                <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+        </div>
+    </div>
+    <span class="chat-notif" id="chatNotif">1</span>
+    <button class="chat-toggle" onclick="toggleChat()">
+        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    </button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
